@@ -8,10 +8,11 @@ var error = document.querySelector("#error");
 
 showProfit.addEventListener("click", function calculate() {
 
-    if (initialPrice.value.length === 0 || quantity.value.length === 0 || currentPrice.value.length === 0) {
-        error.innerText = "Enter all the values";
+    if (initialPrice.value.length === 0 || quantity.value.length === 0 || currentPrice.value.length === 0 || Number(initialPrice.value) <= 0  || Number(quantity.value) <=0 || Number(currentPrice.value) < 0 ) {
+        error.innerText = "Enter all the values with valid numbers";
         result.innerText = "";
     }
+    
     else if (Number(initialPrice.value) > Number(currentPrice.value)) {
         var loss = (Number(initialPrice.value) - Number(currentPrice.value)) * Number(quantity.value);
         var lossPercentage = (loss / (Number(initialPrice.value)*Number(quantity.value))) * 100;
