@@ -70,10 +70,12 @@ button{
 }
 
 footer{
+    text-align: center;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+    
 }
 ul{
     padding-left: 0;
@@ -81,11 +83,8 @@ ul{
 a,
  img,
 li {
+    text-decoration: none;
   display: inline;
-  text-decoration: none;
+  color: var(--primary-color);
+  margin: 0.5vw;
 } 
-
-footer img {
-    width: 40px;
-    padding: 0.2rem;
-  } 
